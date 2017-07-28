@@ -218,32 +218,74 @@
 		<script src="//uStates.js"></script> <!-- creates uStates. -->
 		<script src="/uStates.js"></script> <!-- creates uStates. -->
 		<script src="http://d3js.org/d3.v3.min.js"></script>
+
 		<script>
-			function tooltipHtml(n, d){	/* function to create html content string in tooltip div. */
-				return "<h4>"+n+"</h4><table>"+
-					"<tr><td>Low</td><td>"+(d.low)+"</td></tr>"+
-					"<tr><td>Average</td><td>"+(d.avg)+"</td></tr>"+
-					"<tr><td>High</td><td>"+(d.high)+"</td></tr>"+
-					"</table>";
+			function tooltipHtml(n, d){ /* function to create html content string in tooltip div. */
+			return "<h4>"+n+"</h4><table>"+
+			"<tr><td>Total payments</td><td>"+(d.total)+"</td></tr>"+
+			"</table>";
 			}
-			var sampleData ={};	/* Sample random data. */	
-			["HI", "AK", "FL", "SC", "GA", "AL", "NC", "TN", "RI", "CT", "MA",
-			"ME", "NH", "VT", "NY", "NJ", "PA", "DE", "MD", "WV", "KY", "OH", 
-			"MI", "WY", "MT", "ID", "WA", "DC", "TX", "CA", "AZ", "NV", "UT", 
-			"CO", "NM", "OR", "ND", "SD", "NE", "IA", "MS", "IN", "IL", "MN", 
-			"WI", "MO", "AR", "OK", "KS", "LS", "VA"]
-				.forEach(function(d){ 
-					var low=Math.round(100*Math.random()), 
-						mid=Math.round(100*Math.random()), 
-						high=Math.round(100*Math.random());
-					sampleData[d]={low:d3.min([low,mid,high]), high:d3.max([low,mid,high]), 
-							avg:Math.round((low+mid+high)/3), color:d3.interpolate("#ffffcc", "#800026")(low/100)}; 
-				});
-			/* draw states on id #statesvg */	
-			uStates.draw("#statesvg", sampleData, tooltipHtml);
-			d3.select(self.frameElement).style("height", "600px"); 
+			var payments_data = [
+			{id: "MT",total: 12.00},
+			{id: "VT",total: 15.18},
+			{id: "AK",total: 62.55},
+			{id: "SD",total: 109.23},
+			{id: "ME",total: 145.21},
+			{id: "ND",total: 262.20},
+			{id: "NE",total: 413.00},
+			{id: "NH",total: 599.47},
+			{id: "LS",total: 717.04},
+			{id: "ID",total: 750.06},
+			{id: "NV",total: 764.34},
+			{id: "AL",total: 774.47},
+			{id: "WI",total: 789.23},
+			{id: "HI",total: 1075.21},
+			{id: "AR",total: 1227.37},
+			{id: "NM",total: 1701.42},
+			{id: "DC",total: 1809.02},
+			{id: "WY",total: 2250.30},
+			{id: "DE",total: 2494.48},
+			{id: "OR",total: 2542.89},
+			{id: "UT",total: 2780.83},
+			{id: "KS",total: 2946.89},
+			{id: "MD",total: 2954.24},
+			{id: "RI",total: 3187.63},
+			{id: "WV",total: 3837.98},
+			{id: "MS",total: 4858.46},
+			{id: "WA",total: 5171.90},
+			{id: "CO",total: 5333.45},
+			{id: "MN",total: 5678.03},
+			{id: "IA",total: 6839.82},
+			{id: "SC",total: 8565.94},
+			{id: "GA",total: 9190.85},
+			{id: "TN",total: 10585.28},
+			{id: "AZ",total: 11074.81},
+			{id: "MO",total: 12973.35},
+			{id: "KY",total: 13112.70},
+			{id: "OH",total: 14279.88},
+			{id: "CT",total: 14557.44},
+			{id: "IL",total: 15743.68},
+			{id: "VA",total: 21276.39},
+			{id: "OK",total: 21420.82},
+			{id: "IN",total: 24432.94},
+			{id: "MI",total: 28186.57},
+			{id: "NJ",total: 32415.05},
+			{id: "CA",total: 36112.53},
+			{id: "FL",total: 39197.80},
+			{id: "NC",total: 45638.26},
+			{id: "TX",total: 47788.73},
+			{id: "PA",total: 52278.45},
+			{id: "NY",total: 95690.33},
+			{id: "MA",total: 5062020.89}
+			];
+			payments_data.forEach(function(d){
+			var total = Math.round(d.total);
+			payments_data[d.id]={total:d.total,color:d3.interpolate("#e5f5f9", "#a7ddeb")(total/10000)};
+			});
+			/* draw states on id #statesvg */
+			uStates.draw("#statesvg", payments_data, tooltipHtml);
 		</script>
-		
+				
 		<nav>
     		<ul>
         		<li><a href="/CS498DataViz/d3.js">Home</a></li>
