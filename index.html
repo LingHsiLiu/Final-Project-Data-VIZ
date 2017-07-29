@@ -6,45 +6,7 @@
   		<script src="https://cdnjs.cloudflare.com/ajax/libs/vega-lite/2.0.0-beta.10/vega-lite.js"></script>
   		<script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/3.0.0-beta.19/vega-embed.js"></script>
 		
-		
-		
-		<meta charset="utf-8">
-		<style>
-		svg {
-  			font: 10px sans-serif;
-		}
-			
-		.y.axis path {
-  		display: none;
-		}
-		.y.axis line {
-  		stroke: #fff;
-  		stroke-opacity: .2;
-  		shape-rendering: crispEdges;
-		}
-		.y.axis .zero line {
-  		stroke: #000;
-  		stroke-opacity: 1;
-		}
-		.title {
-  		font: 300 78px Helvetica Neue;
-  		fill: #666;	
-		}
-		.birthyear,
-		.age {
-  		text-anchor: middle;
-		}
-		.birthyear {
-  		fill: #fff;
-		}
-		rect {
-  		fill-opacity: .6;
-  		fill: #e377c2;
-		}
-		rect:first-child {
-  		fill: #1f77b4;
-		}
-		</style>
+
 		
 	</head>
 	<body>
@@ -181,7 +143,46 @@
 			uStates.draw("#statesvg", payments_data, tooltipHtml);
 		</script>
 		
+				
+		
+		<meta charset="utf-8">
+		<style>
+		svg {
+  			font: 10px sans-serif;
+		}
 			
+		.y.axis path {
+  		display: none;
+		}
+		.y.axis line {
+  		stroke: #fff;
+  		stroke-opacity: .2;
+  		shape-rendering: crispEdges;
+		}
+		.y.axis .zero line {
+  		stroke: #000;
+  		stroke-opacity: 1;
+		}
+		.title {
+  		font: 300 78px Helvetica Neue;
+  		fill: #666;	
+		}
+		.birthyear,
+		.age {
+  		text-anchor: middle;
+		}
+		.birthyear {
+  		fill: #fff;
+		}
+		rect {
+  		fill-opacity: .6;
+  		fill: #e377c2;
+		}
+		rect:first-child {
+  		fill: #1f77b4;
+		}
+		</style>
+		
 		<script>
 		var margin = {top: 20, right: 40, bottom: 30, left: 20},
 		    width = 960 - margin.left - margin.right,
