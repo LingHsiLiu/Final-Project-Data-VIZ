@@ -1,0 +1,122 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* anime */
+
+#wrapper #anime {
+	height: 390px;
+	width: 1550px;
+}
+
+img{margin: 0;padding: 0;border: 0; z-index:10;}
+#js_F{position: relative;top: 30px;left: 180px;overflow: hidden;width: 800px;height: 333px;background-attachment: scroll;background-image: url(../PTPImages/home-1.jpg);background-repeat: no-repeat;background-position: center top; z-index:10;
+}
+#js_F img{position: absolute;top: 0;left: 0;width: 800px;height: 333px; z-index:10;}
+#Picture121LYR { position:absolute; top:148px; left:0px; width:4px; height:1260px; z-index:10 }
+
+/* end anime */
+
+
+
+
+/* content  */
+
+#wrapper #content {
+	width: 1550px;
+	height: 2000px;
+	
+}
+
+
+/* content content1    */
+
+#wrapper #content #content1 {
+	height: 400px;
+	width: 1550px;
+}
+
+#wrapper #content #content1 .contentleft {
+	float: left;
+	height: 400px;
+	width: 1200px;
+}
+
+#wrapper #content #content1 .contentright  {
+	float: right;
+	height: 400px;
+	width: 350px;
+}
+
+/* end content content1 */
+
+
+/* content content2   */
+#wrapper #content #content2 {
+	height: 400px;
+	width: 1550px;
+}
+
+#wrapper #content #content2 .contentleft {
+	float: left;
+	height: 400px;
+	width: 1200px;
+}
+
+#wrapper #content #content2 .contentright  {
+	float: right;
+	height: 400px;
+	width: 350px;
+}
+
+/* content content3   */
+#wrapper #content #content3 {
+	height: 400px;
+	width: 1550px;
+}
+
+#wrapper #content #content3 .contentleft {
+	float: left;
+	height: 400px;
+	width: 1200px;
+}
+
+#wrapper #content #content3 .contentright  {
+	float: right;
+	height: 400px;
+	width: 350px;
+}
+
+#wrapper #content #content4 {
+	height: 400px;
+	width: 1550px;
+}
+
+#wrapper #content #content4 .contentleft {
+	float: left;
+	height: 400px;
+	width: 1200px;
+}
+
+#wrapper #content #content4 .contentright  {
+	float: right;
+	height: 400px;
+	width: 350px;
+}
+
+#wrapper #content #content5 {
+	height: 400px;
+	width: 1550px;
+}
+
+#wrapper #content #content5 .contentleft {
+	float: left;
+	height: 400px;
+	width: 1200px;
+}
+
+#wrapper #content #content5 .contentright  {
+	float: right;
+	height: 400px;
+	width: 350px;
+}
