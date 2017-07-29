@@ -6,7 +6,7 @@
 
 #wrapper #anime {
 	height: 390px;
-	width: 1500px;
+	width: 1300px;
 }
 
 img{margin: 0;padding: 0;border: 0; z-index:10;}
@@ -17,7 +17,11 @@ img{margin: 0;padding: 0;border: 0; z-index:10;}
 
 /* end anime */
 
-
+#wrapper #precontent {
+	width: 1500px;
+	height: 50px;
+	
+}
 
 
 /* content  */
@@ -33,7 +37,7 @@ img{margin: 0;padding: 0;border: 0; z-index:10;}
 
 #wrapper #content #content1 {
 	height: 700px;
-	width: 1500px;
+	width: 1300px;
 }
 
 #wrapper #content #content1 .contentleft {
@@ -45,7 +49,7 @@ img{margin: 0;padding: 0;border: 0; z-index:10;}
 #wrapper #content #content1 .contentright  {
 	float: right;
 	height: 400px;
-	width: 500px;
+	width: 300px;
 }
 
 /* end content content1 */
@@ -54,13 +58,13 @@ img{margin: 0;padding: 0;border: 0; z-index:10;}
 /* content content2   */
 #wrapper #content #content2 {
 	height: 400px;
-	width: 1500px;
+	width: 1300px;
 }
 
 #wrapper #content #content2 .contentleft {
 	float: left;
 	height: 400px;
-	width: 1100px;
+	width: 900px;
 }
 
 #wrapper #content #content2 .contentright  {
@@ -72,7 +76,7 @@ img{margin: 0;padding: 0;border: 0; z-index:10;}
 /* content content3   */
 #wrapper #content #content3 {
 	height: 400px;
-	width: 1500px;
+	width: 1300px;
 }
 
 #wrapper #content #content3 .contentleft {
@@ -84,6 +88,6 @@ img{margin: 0;padding: 0;border: 0; z-index:10;}
 #wrapper #content #content3 .contentright  {
 	float: right;
 	height: 400px;
-	width: 400px;
+	width: 200px;
 }
 
