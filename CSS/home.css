@@ -54,69 +54,36 @@ img{margin: 0;padding: 0;border: 0; z-index:10;}
 /* content content2   */
 #wrapper #content #content2 {
 	height: 400px;
-	width: 1550px;
+	width: 1500px;
 }
 
 #wrapper #content #content2 .contentleft {
 	float: left;
 	height: 400px;
-	width: 1200px;
+	width: 1100px;
 }
 
 #wrapper #content #content2 .contentright  {
 	float: right;
 	height: 400px;
-	width: 350px;
+	width: 400px;
 }
 
 /* content content3   */
 #wrapper #content #content3 {
 	height: 400px;
-	width: 1550px;
+	width: 1500px;
 }
 
 #wrapper #content #content3 .contentleft {
 	float: left;
 	height: 400px;
-	width: 1200px;
+	width: 1100px;
 }
 
 #wrapper #content #content3 .contentright  {
 	float: right;
 	height: 400px;
-	width: 350px;
+	width: 400px;
 }
 
-#wrapper #content #content4 {
-	height: 400px;
-	width: 1550px;
-}
-
-#wrapper #content #content4 .contentleft {
-	float: left;
-	height: 400px;
-	width: 1200px;
-}
-
-#wrapper #content #content4 .contentright  {
-	float: right;
-	height: 400px;
-	width: 350px;
-}
-
-#wrapper #content #content5 {
-	height: 400px;
-	width: 1550px;
-}
-
-#wrapper #content #content5 .contentleft {
-	float: left;
-	height: 400px;
-	width: 1200px;
-}
-
-#wrapper #content #content5 .contentright  {
-	float: right;
-	height: 400px;
-	width: 350px;
-}
