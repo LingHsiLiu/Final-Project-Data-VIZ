@@ -134,7 +134,7 @@
 			];
 			payments_data.forEach(function(d){
 			var total = Math.round(d.total);
-			payments_data[d.id]={total:d.total,color:d3.interpolate("#e5f5f9", "#a7ddeb")(total/1)};
+			payments_data[d.id]={total:d.total,color:d3.interpolate("#e5f5f9", "#a7ddeb")(total/2)};
 			});
 			/* draw states on id #statesvg */
 			uStates.draw("#statesvg", payments_data, tooltipHtml);
