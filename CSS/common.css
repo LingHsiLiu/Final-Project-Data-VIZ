@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-
 a {cursor:pointer;}
 a img {border:none; margin:0; padding:0;}
 a:link {color:#2a4cdc; text-decoration:none;}
@@ -54,6 +53,29 @@ a:active {
 	border-left-color: #000000;
 }
 
+#wrapper #banner p {
+
+	width: 800px;
+	margin-top: 30px;
+	margin-left: 100px;
+	position: relative;
+	font-size: 14px;
+	font-weight: bold;
+	color: #800000;
+	
+}
+
+#wrapper #banner h1 {
+
+	width: 800px;
+	margin-top: 30px;
+	margin-left: 100px;
+	position: relative;
+	font-size: 24px;
+	font-weight: bold;
+	color: #800000;
+	
+}
 
 
 /* footer */
