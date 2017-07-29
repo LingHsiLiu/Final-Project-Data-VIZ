@@ -56,7 +56,6 @@ a:active {
 #wrapper #banner p {
 
 	width: 800px;
-	margin-top: 30px;
 	margin-left: 100px;
 	position: relative;
 	font-size: 14px;
@@ -73,7 +72,7 @@ a:active {
 	position: relative;
 	font-size: 24px;
 	font-weight: bold;
-	color: #800000;
+	color: #000000;
 	
 }
 
