@@ -145,12 +145,12 @@ nav {
 }
 .nav li{
 	position: relative;
-	padding:0px, 0px, 0px, 30px;
+	padding:0px, 0px, 0px, 50px;
 	float: left;
 	color: #000000;
 	list-style: none;
 	background-color: #999999;
-	width: 150px;
+	width: 170px;
 	Height: 60px;
 	text-align:center;
 	text-vertical-align:middle;
