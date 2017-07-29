@@ -39,7 +39,7 @@ a:active {
 }
 #wrapper #banner {
 	height: 400px;
-	width: 1600px;
+	width: 1500px;
 	background:url(../PTPImages/The-Utimate-in-Fire-Protection.jpg);
 	
 	background-repeat: no-repeat;
@@ -59,7 +59,7 @@ a:active {
 /* footer */
 #footer {
 	height: 120px;
-	width: 1600px;
+	width: 1500px;
 	background-color: #000000;
 	background:url(../PTPImages/footerbackgroup2.jpg);
 }
@@ -121,15 +121,15 @@ a:active {
 
 #wrapper #navbar {
 	height: 57px;
-	width: 1600px;
+	width: 1500px;
 /*	background-color: #999999; */
 }
 
 nav { 
-	height:57px; padding:0px 0 0 133px;
+	height:57px; padding:0px 0 0 100px;
 	display: block;
     	float: left;
-    	width: 1027px;
+    	width: 1500px;
     	margin-bottom: 0px; 
 	text-align:center; 
 	z-index:50; 
