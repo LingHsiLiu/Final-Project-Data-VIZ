@@ -120,13 +120,13 @@ a:active {
 
 
 #wrapper #navbar {
-	height: 57px;
+	height: 60px;
 	width: 1500px;
 /*	background-color: #999999; */
 }
 
 nav { 
-	height:57px; padding:0px 0 0 100px;
+	height:57px; padding:0px 0 0 80px;
 	display: block;
     	float: left;
     	width: 1500px;
@@ -141,17 +141,17 @@ nav {
 .nav ul{
     	margin: 0;
     	padding: 0;
-	Height: 57px;
+	Height: 60px;
 }
 .nav li{
 	position: relative;
-	padding:0px, 0px, 0px, 0px;
+	padding:0px, 0px, 0px, 30px;
 	float: left;
 	color: #000000;
 	list-style: none;
 	background-color: #999999;
-	width: 125px;
-	Height: 57px;
+	width: 150px;
+	Height: 60px;
 	text-align:center;
 	text-vertical-align:middle;
 	font-size: 12px;
