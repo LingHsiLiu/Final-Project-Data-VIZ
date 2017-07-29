@@ -39,13 +39,13 @@ img{margin: 0;padding: 0;border: 0; z-index:10;}
 #wrapper #content #content1 .contentleft {
 	float: left;
 	height: 700px;
-	width: 900px;
+	width: 1000px;
 }
 
 #wrapper #content #content1 .contentright  {
 	float: right;
 	height: 400px;
-	width: 600px;
+	width: 500px;
 }
 
 /* end content content1 */
