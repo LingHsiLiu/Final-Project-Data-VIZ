@@ -50,9 +50,9 @@ img{margin: 0;padding: 0;border: 0; z-index:10;}
 #wrapper #content #content1 .contentleft p {
 
 	width: auto;
-	margin-left: 100px;
+	margin-left: 50px;
 	position: relative;
-	font-size: 12px;
+	font-size: 20px;
 	color: #000000;
 	
 }
