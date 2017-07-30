@@ -18,7 +18,7 @@
 	</head>
 	<body>
 		<div id = "wrapper"> 
-    	<div id ="precontent">
+    			<div id ="precontent">
 			</div>
 
 		
@@ -29,7 +29,52 @@
 			<div id ="content">
 				<div id="content2">
 					<div class = "contentleft">
-
+						<p>2011 Unemployment Rate</p>
+						<div id="vis"></div>
+						<script type="text/javascript">
+							var yourVlSpec = {
+							"$schema": "https://vega.github.io/schema/vega-lite/v2.0.json",
+							"description": "A simple bar chart with embedded data.",
+								"data": {
+								"values": [
+									{"US States": "AL","Unemployment Rate %": 9.6}, {"US States": "AK","Unemployment Rate %": 7.6}, 
+									{"US States": "AZ","Unemployment Rate %": 9.5}, {"US States": "AR","Unemployment Rate %": 8.3}, 
+									{"US States": "CA","Unemployment Rate %": 11.7}, {"US States": "CO","Unemployment Rate %": 8.4},
+									{"US States": "CT","Unemployment Rate %": 8.8}, {"US States": "DE","Unemployment Rate %": 7.5}, 
+									{"US States": "DC","Unemployment Rate %": 10.2}, {"US States": "FL","Unemployment Rate %": 10},
+									{"US States": "GA","Unemployment Rate %": 10.2}, {"US States": "HI","Unemployment Rate %": 6.8},
+									{"US States": "ID","Unemployment Rate %": 8.3}, {"US States": "IL","Unemployment Rate %": 9.7},
+									{"US States": "IN","Unemployment Rate %": 9.1}, {"US States": "IA","Unemployment Rate %": 5.5},
+									{"US States": "KS","Unemployment Rate %": 6.5}, {"US States": "KY","Unemployment Rate %": 9.4},
+									{"US States": "LA","Unemployment Rate %": 7.8}, {"US States": "ME","Unemployment Rate %": 7.9},
+									{"US States": "MD","Unemployment Rate %": 7.2}, {"US States": "MA","Unemployment Rate %": 7.3},
+									{"US States": "MI","Unemployment Rate %": 10.4}, {"US States": "MN","Unemployment Rate %": 6.5},
+									{"US States": "MS","Unemployment Rate %": 10}, {"US States": "MO","Unemployment Rate %": 8.5},
+									{"US States": "MT","Unemployment Rate %": 6.9}, {"US States": "NE","Unemployment Rate %": 4.4},
+									{"US States": "NV","Unemployment Rate %": 13}, {"US States": "NH","Unemployment Rate %": 5.4},
+									{"US States": "NJ","Unemployment Rate %": 9.3}, {"US States": "NM","Unemployment Rate %": 7.5},
+									{"US States": "NY","Unemployment Rate %": 8.3}, {"US States": "NC","Unemployment Rate %": 10.3},
+									{"US States": "ND","Unemployment Rate %": 3.5}, {"US States": "OH","Unemployment Rate %": 8.8},
+									{"US States": "OK","Unemployment Rate %": 5.9}, {"US States": "OR","Unemployment Rate %": 9.5},
+									{"US States": "PA","Unemployment Rate %": 7.9}, {"US States": "RI","Unemployment Rate %": 11},
+									{"US States": "SC","Unemployment Rate %": 10.6}, {"US States": "SD","Unemployment Rate %": 4.7},
+									{"US States": "TN","Unemployment Rate %": 9}, {"US States": "TX","Unemployment Rate %": 7.8},
+									{"US States": "UT","Unemployment Rate %": 6.7}, {"US States": "VT","Unemployment Rate %": 5.5},
+									{"US States": "VA","Unemployment Rate %": 6.6}, {"US States": "WA","Unemployment Rate %": 9.3},
+									{"US States": "WV","Unemployment Rate %": 8.1}, {"US States": "WI","Unemployment Rate %": 7.8},
+									{"US States": "WY","Unemployment Rate %": 5.8}, {"US States": "PR","Unemployment Rate %": 16}
+									]
+								},
+								"mark": "bar",
+								"encoding": {
+								"x": {"field": "US States", "type": "ordinal"},
+								"y": {"field": "Unemployment Rate %", "type": "quantitative"}
+								}
+							}
+							vega.embed("#vis", yourVlSpec);
+						</script>
+						<p></p>
+						<p></p>
 						
 					</div>
 					<div class = "contentright">
