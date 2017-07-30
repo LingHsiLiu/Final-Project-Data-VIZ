@@ -77,63 +77,6 @@ a:active {
 }
 
 
-/* footer */
-#footer {
-	height: 120px;
-	width: 1300px;
-	background-color: #000000;
-	background:url(../PTPImages/footerbackgroup2.jpg);
-}
-
-
-#footer #footertable {
-	display: table;
-	font-family: "Times New Roman", Times, serif;
-	font-size: 12px;
-	color: #FFFFFF;
-	padding-top: 10px;
-	padding-left: 50px;
-}
-#footer #footertable .footertr {
-	display: table-row;
-}
-#footer #footertable .footertr .footertd {
-	display: table-cell;
-	text-align: left;
-	height: 26px;
-	width: 115px;
-	font-size: 14px;
-	padding-top: 3px;
-	padding-left: 3px;
-	color: #FFFFFF;
-}
-
-
-#footer #footertable2 {
-	display: table;
-	text-align: center;
-	width: 1300px;
-	padding-bottom: 5px;
-	font-family: "Times New Roman", Times, serif;
-	font-size: 10px;
-	color: #FFFFFF;
-	padding-top: 15px;
-}
-#footer #footertable2 .footertr2 {
-	display: table-row;
-	text-align: center;
-}
-#footer #footertable2 .footertr2 .footertd2 {
-	display: table-cell;
-	text-align: center;
-}
-#wrapper #footer #footertable .footertr .footertd a {
-	color: #FFFFFF;
-	text-align: left;
-}
-
-
-/* footer */
 
 
 /* navbar */
