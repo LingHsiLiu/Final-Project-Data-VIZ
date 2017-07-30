@@ -1,0 +1,87 @@
+
+@charset "utf-8";
+
+a {cursor:pointer;}
+a img {border:none; margin:0; padding:0;}
+a:link {color:#2a4cdc; text-decoration:none;}
+a:visited {
+	color:#2a4cdc;
+	text-decoration:none;
+}
+a:hover {
+	color:#F00;
+	text-decoration:none;
+}
+a:active {
+	color:#F00;
+	text-decoration:none;
+}
+
+
+
+
+#wrapper {
+	height: auto;
+	width: 1300px;
+	border-right-width: 4px;
+	border-left-width: 4px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #FFFFFF;
+	border-left-color: #FFFFFF;
+	border-bottom-width: 4px;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+	border-top-width: 4px;
+	border-top-style: solid;
+	border-top-color: #000000;
+	margin: auto;
+}
+
+#wrapper #banner {
+	height: 400px;
+	width: 1300px;
+	background:url(../PTPImages/The-Utimate-in-Fire-Protection.jpg);
+	
+	background-repeat: no-repeat;
+	border-top-width: 2px;
+	border-right-width: 2px;
+	border-left-width: 2px;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+	border-top-color: #000000;
+	border-right-color: #000000;
+	border-left-color: #000000;
+}
+
+
+#wrapper #banner p {
+
+	width: 800px;
+	margin-left: 100px;
+	position: relative;
+	font-size: 14px;
+	font-weight: bold;
+	color: #800000;
+	
+}
+
+#wrapper #banner h1 {
+
+	width: 800px;
+	margin-top: 30px;
+	margin-left: 100px;
+	position: relative;
+	font-size: 24px;
+	font-weight: bold;
+	color: #000000;
+	
+}
+
+
+#wrapper #precontent {
+	width: 1300px;
+	height: 50px;
+	
+}
