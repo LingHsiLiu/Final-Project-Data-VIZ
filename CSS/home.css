@@ -135,3 +135,13 @@ img{margin: 0;padding: 0;border: 0; z-index:10;}
 	
 }
 
+#wrapper #nextpage {
+
+	width: auto;
+	margin-left: 730px;
+	position: relative;
+	font-size: 20px;
+	color: #000000;
+	
+}
+
