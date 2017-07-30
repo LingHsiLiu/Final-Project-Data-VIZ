@@ -42,6 +42,7 @@ img{margin: 0;padding: 0;border: 0; z-index:10;}
 
 #wrapper #content #content1 .contentleft {
 	float: left;
+	margin-left: 100px;
 	height: 700px;
 	width: 1000px;
 }
@@ -138,7 +139,7 @@ img{margin: 0;padding: 0;border: 0; z-index:10;}
 #wrapper #nextpage {
 
 	width: auto;
-	margin-left: 730px;
+	margin-left: 650px;
 	position: relative;
 	font-size: 20px;
 	color: #000000;
