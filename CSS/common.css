@@ -85,12 +85,12 @@ a:active {
 
 #wrapper #navbar {
 	height: 100px;
-	width: 1300px;
+	width: 1200px;
 /*	background-color: #999999; */
 }
 
 nav { 
-	height:100px; padding:0px 0 0 80px;
+	height:100px; padding:50px 0 0 80px;
 	display: block;
     	float: left;
     	width: 900px;
