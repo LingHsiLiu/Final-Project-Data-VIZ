@@ -63,26 +63,7 @@
 		<script src="//d3js.org/d3.v3.min.js"></script>
 		<script src="http://d3js.org/d3.v3.min.js"></script>
 		
-		function openCity(evt, cityName) {
-		// Declare all variables
-		var i, tabcontent, tablinks;
 
-		// Get all elements with class="tabcontent" and hide them
-		tabcontent = document.getElementsByClassName("tabcontent");
-		for (i = 0; i < tabcontent.length; i++) {
-		tabcontent[i].style.display = "none";
-		}
-
-		// Get all elements with class="tablinks" and remove the class "active"
-		tablinks = document.getElementsByClassName("tablinks");
-		for (i = 0; i < tablinks.length; i++) {
-		tablinks[i].className = tablinks[i].className.replace(" active", "");
-		}
-
-		// Show the current tab, and add an "active" class to the button that opened the tab
-		document.getElementById(cityName).style.display = "block";
-		evt.currentTarget.className += " active";
-		}
 
 		
 	</head>
@@ -126,84 +107,6 @@
 			<div id ="content">
 				<div id="content1">
 					<div class = "contentleft">
-						<div id="2011unemployment" class="tabcontent">
-							<p><B>Map Chart </B> &nbsp;&nbsp;&nbsp;2011 Unemployment Rate </p>
-							<p></p>
-							<div id="tooltip"></div><!-- div to hold tooltip. -->
-							<svg width="960" height="600" id="statesvg"></svg> <!-- svg to hold the map. -->
-							<script src="uStates.js"></script> <!--  creates uStates. -->
-							<script src="//uStates.js"></script> <!-- creates uStates. -->
-							<script src="/uStates.js"></script> <!-- creates uStates. -->
-							<script src="http://d3js.org/d3.v3.min.js"></script>
-
-							<script>
-								function tooltipHtml(n, d){ /* function to create html content string in tooltip div. */
-								return "<h4>"+n+"</h4><table>"+
-								"<tr><td>2011 Unemployment Rate</td><td>"+(d.total)+"</td></tr>"+
-								"</table>";
-								}
-								var payments_data = [
-								{id: "MT",total: 6.9},
-								{id: "VT",total: 5.5},
-								{id: "AK",total: 7.6},
-								{id: "SD",total: 4.7},
-								{id: "ME",total: 7.9},
-								{id: "ND",total: 7.2},
-								{id: "NE",total: 4.4},
-								{id: "NH",total: 5.4},
-								{id: "LS",total: 7.8},
-								{id: "ID",total: 8.3},
-								{id: "NV",total: 13.0},
-								{id: "AL",total: 9.6},
-								{id: "WI",total: 7.8},
-								{id: "HI",total: 6.8},
-								{id: "AR",total: 8.3},
-								{id: "NM",total: 7.5},
-								{id: "DC",total: 10.2},
-								{id: "WY",total: 5.8},
-								{id: "DE",total: 7.5},
-								{id: "OR",total: 9.5},
-								{id: "UT",total: 6.7},
-								{id: "KS",total: 6.5},
-								{id: "MD",total: 7.2},
-								{id: "RI",total: 11.0},
-								{id: "WV",total: 8.1},
-								{id: "MS",total: 10.0},
-								{id: "WA",total: 9.3},
-								{id: "CO",total: 8.4},
-								{id: "MN",total: 6.5},
-								{id: "IA",total: 5.5},
-								{id: "SC",total: 10.6},
-								{id: "GA",total: 10.2},
-								{id: "TN",total: 9.0},
-								{id: "AZ",total: 9.5},
-								{id: "MO",total: 8.5},
-								{id: "KY",total: 9.4},
-								{id: "OH",total: 8.8},
-								{id: "CT",total: 8.8},
-								{id: "IL",total: 9.7},
-								{id: "VA",total: 6.6},
-								{id: "OK",total: 5.9},
-								{id: "IN",total: 9.1},
-								{id: "MI",total: 10.4},
-								{id: "NJ",total: 9.3},
-								{id: "CA",total: 11.7},
-								{id: "FL",total: 10.0},
-								{id: "NC",total: 10.3},
-								{id: "TX",total: 7.8},
-								{id: "PA",total: 7.9},
-								{id: "NY",total: 8.3},
-								{id: "MA",total: 7.3}
-								];
-								payments_data.forEach(function(d){
-								var total = Math.round(d.total);
-								payments_data[d.id]={total:d.total,color:d3.interpolate("#e5f5f9", "#a7ddeb")(total/2)};
-								});
-								/* draw states on id #statesvg */
-								uStates.draw("#statesvg", payments_data, tooltipHtml);
-							</script>	
-						</div>
-						<div id="2012unemployment" class="tabcontent">
 							<p><B>Map Chart </B> &nbsp;&nbsp;&nbsp;2012 Unemployment Rate </p>
 							<p></p>
 							<div id="tooltip"></div><!-- div to hold tooltip. -->
@@ -279,10 +182,10 @@
 								/* draw states on id #statesvg */
 								uStates.draw("#statesvg", payments_data, tooltipHtml);
 							</script>
-						</div>
+						
 					</div>
 					<div class = "contentright">
-						<p>Hello</p>
+						<p>Hellodsafgahjsdfbhjdsbchabwehbdhjsbasadjkjkfsdjkfnjkdsncjkbdschabdbhdhbnsddgggggdgashdbscjhdbhjsbcdhjbchjdbs</p>
 						<p>Hello</p>
 						<p>Hello</p>
 						<p>Hello</p>
@@ -294,9 +197,8 @@
 					
 					</div>
 					
-					<div class = "contentright">
-										
-						<div id="piechart1"></div>
+					<div class = "contentright">										
+						<div id="piechart2"></div>
 						<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 						<script type="text/javascript">
 						// Load google charts
@@ -306,17 +208,16 @@
 						function drawChart() {
 						  var data = google.visualization.arrayToDataTable([
 						  ['Task', 'Hours per Day'],
-						  ['Employment', 141791255],
-						  ['Unemployment', 14035049]
+						  ['Employment', 143688931],
+						  ['Unemployment', 12698111]
 						]);
 						  // Optional; add a title and set the width and height of the chart
-						  var options = {'title':'2011 Total US Unemployment Rate', 'width':500, 'height':350};
+						  var options = {'title':'2012 Total US Unemployment Rate', 'width':500, 'height':350};
 						  // Display the chart inside the <div> element with id="piechart"
-						  var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
+						  var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
 						  chart.draw(data, options);
 						}
-						</script>				
-						
+						</script>												
 					</div>
 				</div><!-- end content 2 -->
 				<div id="content3">
@@ -371,6 +272,7 @@
 					</div>
 					
 					<div class = "contentright">
+						<p>ewrwerewfdsfdsfasdfsdfefdsfadsfdsfdshdshfjkadshfkjhsdfahdsjfhajdafjkdsfajkdsjkafahejk</p>
 					</div>
 				</div><!-- end content 3 -->
 				
