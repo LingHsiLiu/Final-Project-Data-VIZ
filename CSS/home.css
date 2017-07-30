@@ -46,6 +46,16 @@ img{margin: 0;padding: 0;border: 0; z-index:10;}
 	width: 1000px;
 }
 
+#wrapper #content #content1 .contentleft p {
+
+	width: 800px;
+	margin-left: 50px;
+	position: relative;
+	font-size: 12px;
+	color: #000000;
+	
+}
+
 #wrapper #content #content1 .contentright  {
 	float: right;
 	height: 400px;
@@ -55,7 +65,6 @@ img{margin: 0;padding: 0;border: 0; z-index:10;}
 #wrapper #content #content1 .contentright p {
 
 	width: 800px;
-
 	margin-left: 50px;
 	position: relative;
 	font-size: 12px;
