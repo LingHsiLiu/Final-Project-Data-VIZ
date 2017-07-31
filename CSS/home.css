@@ -221,4 +221,28 @@ img{margin: 0;padding: 0;border: 0; z-index:10;}
 }
 
 
+#wrapper #content #content11 {
+	height: 400px;
+	width: 1300px;
+}
+
+#wrapper #content #content1 .contentleft {
+	float: left;
+	height: 400px;
+	width: 300px;
+}
+
+#wrapper #content #content1 .contentmiddle {
+	float: left;
+	height: 400px;
+	width: 300px;
+}
+
+#wrapper #content #content11 .contentright  {
+	float: right;
+	height: 400px;
+	width: 300px;
+}
+
+
 
