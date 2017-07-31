@@ -10,55 +10,7 @@
 		<link href="CSS/common.css" rel="stylesheet" type="text/css" />
 		<link href="CSS/home.css" rel="stylesheet" type="text/css" />
 		
-		<meta charset="utf-8">
-		<style>
-			.state{
-				fill: none;
-				stroke: #a9a9a9;
-				stroke-width: 1;
-			}
-			.state:hover{
-				fill-opacity:0.5;
-			}
-			#tooltip {   
-				position: absolute;           
-				text-align: center;
-				padding: 20px;             
-				margin: 10px;
-				font: 12px sans-serif;        
-				background: lightsteelblue;   
-				border: 1px;      
-				border-radius: 2px;           
-				pointer-events: none;         
-			}
-			#tooltip h4{
-				margin:0;
-				font-size:14px;
-			}
-			#tooltip{
-				background:rgba(0,0,0,0.9);
-				border:1px solid grey;
-				border-radius:5px;
-				font-size:12px;
-				width:auto;
-				padding:4px;
-				color:white;
-				opacity:0;
-			}
-			#tooltip table{
-				table-layout:fixed;
-			}
-			#tooltip tr td{
-				padding:0;
-				margin:0;
-			}
-			#tooltip tr td:nth-child(1){
-				width:50px;
-			}
-			#tooltip tr td:nth-child(2){
-				text-align:center;
-			}
-		</style>
+
 		
 		<script src="//d3js.org/d3.v3.min.js"></script>
 		<script src="http://d3js.org/d3.v3.min.js"></script>
@@ -66,37 +18,18 @@
 	</head>
 	<body>
 		<div id = "wrapper"> 
-			<div id = "banner">	
-				<h1>Unemployment Rate and Unemployed Population for States from 2011 to 2015 </h1>
-				<p></p>
-				<p>Introduce</P>
-				<p>I use Map Chart, Bar chart and pie chart to show unemployment rate and unemployed population from 2011 to 2015. 
-				In these chart, we know unemployment rate go down. In east and west coast, the unemployment rate is higher more than middle area.
-			        </P>
+			<div id="nextpage">
+				<button type="button" ><a href="index.html" >&#8593;</a></button>
 			</div>
-		
-<!---navbar-->
-			<div id="navbar">
-				<nav class="nav">
-					<ul>
-						<li><a href="index.html">2011 <br>Unemployment</a></li>
-						<li><a href="2012unemployment.html">2012 <br>Unemployment</a></li>
-						<li><a href="2013unemployment.html">2013 <br>Unemployment</a></li>
-						<li><a href="2014unemployment.html">2014 <br>Unemployment</a></li>
-						<li><a href="2015unemployment.html">2015 <br>Unemployment</a></li>
 
-					</ul>
-				</nav>   
-			</div>
-        
-<!-- end navbar-->
+		
+
 			<div id ="precontent">
 			</div>
 
 			<div id ="content">
-				<div id="content1">
+				<div id="content2">
 					<div class = "contentleft">
-							
 						<p>2011 Unemployment Rate</p>
 						<div id="piechart1"></div>
 						<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -118,23 +51,127 @@
 						  chart.draw(data, options);
 						}
 						</script>				
+         		
 					</div>
 					<div class = "contentright">
 
 					
 					</div>
-				</div><!-- end content 1 -->		
-			</div><!-- end content -->
-			<div id ="mapcontent">
-				<p>In Geographical Map Chart, it shows unemployed population for States in 2011. 
-				The deep color shows more unemployed population. Palette is from deep Blue to light blue. 
-                                Color split 5 steps for unemployment rate from 0% to 16%.
-				</p>
-			</div>
-			<div id="nextpage">
-				<button type="button" ><a href="barchart.html" >&#x2193;</a></button>
+				</div><!-- end content 2 -->
+				<div id="content3">
+					<div class = "contentleft">
+						<div id="piechart2"></div>
+						      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+						      <script type="text/javascript">
+						      // Load google charts
+						      google.charts.load('current', {'packages':['corechart']});
+						      google.charts.setOnLoadCallback(drawChart);
+						      // Draw the chart and set the chart values
+						      function drawChart() {
+							var data = google.visualization.arrayToDataTable([
+							['Task', 'Hours per Day'],
+							['Employment', 143688931],
+							['Unemployment', 12698111]
+						      ]);
+							// Optional; add a title and set the width and height of the chart
+							var options = {'title':'2012 Total US Unemployment Rate', 'width':500, 'height':350};
+							// Display the chart inside the <div> element with id="piechart"
+							var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
+							chart.draw(data, options);
+						      }
+						      </script>		
 
+					</div>
+				</div><!-- end content3 -->
+				<div id="content4">
+					<div class = "contentleft">
+						<div id="piechart3"></div>
+						  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+						  <script type="text/javascript">
+						  // Load google charts
+						  google.charts.load('current', {'packages':['corechart']});
+						  google.charts.setOnLoadCallback(drawChart);
+						  // Draw the chart and set the chart values
+						  function drawChart() {
+						    var data = google.visualization.arrayToDataTable([
+						    ['Task', 'Hours per Day'],
+						    ['Employment', 145126067],
+						    ['Unemployment', 11642668]
+						  ]);
+						    // Optional; add a title and set the width and height of the chart
+						    var options = {'title':'2013 Total US Unemployment Rate', 'width':500, 'height':350};
+						    // Display the chart inside the <div> element with id="piechart"
+						    var chart = new google.visualization.PieChart(document.getElementById('piechart3'));
+						    chart.draw(data, options);
+						  }
+						  </script>				
+					</div>
+				</div><!-- end content4 -->
+				<div id="content5">
+					<div class = "contentleft">
+						<p>2014 Unemployment Rate</p>
+						  <div id="piechart4"></div>
+						  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+						  <script type="text/javascript">
+						  // Load google charts
+						  google.charts.load('current', {'packages':['corechart']});
+						  google.charts.setOnLoadCallback(drawChart);
+						  // Draw the chart and set the chart values
+						  function drawChart() {
+						    var data = google.visualization.arrayToDataTable([
+						    ['Task', 'Hours per Day'],
+						    ['Employment', 147604328],
+						    ['Unemployment', 9796479]
+						  ]);
+						    // Optional; add a title and set the width and height of the chart
+						    var options = {'title':'2014 Total US Unemployment Rate', 'width':500, 'height':350};
+						    // Display the chart inside the <div> element with id="piechart"
+						    var chart = new google.visualization.PieChart(document.getElementById('piechart4'));
+						    chart.draw(data, options);
+						  }
+						  </script>		
+						
+					</div>
+				</div><!-- end content5 -->
+				<div id="content6">
+					<div class = "contentleft">
+							<div id="piechart5"></div>
+				<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+				<script type="text/javascript">
+				// Load google charts
+				google.charts.load('current', {'packages':['corechart']});
+				google.charts.setOnLoadCallback(drawChart);
+				// Draw the chart and set the chart values
+				function drawChart() {
+				  var data = google.visualization.arrayToDataTable([
+				  ['Task', 'Hours per Day'],
+				  ['Employment', 149950804],
+				  ['Unemployment', 8439309]
+				]);
+				  // Optional; add a title and set the width and height of the chart
+				  var options = {'title':'2015 Total US Unemployment Rate', 'width':500, 'height':350};
+				  // Display the chart inside the <div> element with id="piechart"
+				  var chart = new google.visualization.PieChart(document.getElementById('piechart5'));
+				  chart.draw(data, options);
+				}
+				</script>			
+
+					</div>
+				</div><!-- end content6 -->
+			</div><!-- end content -->
+			<div id="barcontent">
+				<p>In Bar chart, it shows that different states have different unemployment rate from 2011 to 2015.</P>
+				<p>The America economy became better from 2011 to 2015, because the unemployment rate had continued to decline from 2011 to 2015 in each of the 50 States.</P>
+				<p>The highest unemployment rate from 2011 to 2015 is Puerto Rico. </P>
+				<p>The lowest unemployment rate from 2011 to 2015 is North Dakota. </P>
+				<p>The largest decreasing unemployment rate is Nevada that has dropped 5.1 % from 2011(13.0%) to 2015 (6.7%). </P>
+				<p>The second declining unemployment rate is California, dropping 5.5 %. </P>
+				<p>The third decreasing unemployment rate is Florida, 4.6% drop from 2011 to 2015.  </P>
 			</div>
-		</div>
+			
+			<div id="nextpage">
+				<button type="button" ><a href=piechart.html" >&#8595;</a></button>
+			</div>
+		
 	</body>
 </html>
