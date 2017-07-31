@@ -72,129 +72,47 @@
 				<h1>Unemployment Rate and Unemployed Population for States from 2011 to 2015 </h1>
 				<p></p>
 				<p><b>Introduce</b></P>
-				<p></p>
-				<p>The narrative visualization is Interactive Slideshow. In each slide, we can know more information about unemployment rate. 
-				I use Map Chart, Bar chart and pie chart to show unemployment rate and unemployed population from 2011 to 2015. 
-				After we watch these charts, we easily know which state has high unemployment rate for each year 
-				and we know unemployment rate is going down for every year.		
-				</P>
-		
-			</div>
-		
-<!---navbar-->
-			<div id="navbar">
-				<nav class="nav">
-					<ul>
-						<li><a href="index.html">2011 <br>Unemployment</a></li>
-						<li><a href="2012unemployment.html">2012 <br>Unemployment</a></li>
-						<li><a href="2013unemployment.html">2013 <br>Unemployment</a></li>
-						<li><a href="2014unemployment.html">2014 <br>Unemployment</a></li>
-						<li><a href="2015unemployment.html">2015 <br>Unemployment</a></li>
 
-					</ul>
-				</nav>          
+				<p>Narrative Structure<br>
+
+				The narrative structure is an interactive slide show.<br>
+				The first slide is Map chart, the second slide is bar chart and the third slide is pie chart.<br>
+				Click on the arrow on the top or bottom to next slideshow.
+				</p>
+
+				<p>Scenes<br>
+				There are a total 3 scenes in this slideshow.<br>
+				The 1 slide is map chart. It shows unemployment rate for each state. And, I use different colors to show different rate.<br>
+				The 2 slide is bar chart. It shows unemployment rate by bar chart.<br>
+				The 3 slide is pie chart. It shows total US unemployment rate.
+				</p>
+
+				<p>Parameters<br>
+				In the Map chart and bar chart, Parameters is unemployment rateParameters for each state. <br>
+				In the pie chart, I use unemployment population to run how many unemployment rate for all United States.
+				</p>
+				
+				<p>Annotations<br>
+				Annotation 1: When you move to map, the color will change and show the state name and unemployment rate for each year.<br>
+				Annotation 2: When you click vega editor of each bar chart, it will shows unemployment rate for states and show the state name. <br>  
+				Annotation 3: When you move to pie chart, it shows how many people are unemployed and employed and show the rate. 
+				</p>
+				<p>Triggers<br>
+				Triggers 1 : In 1 slide, we can click year to see different unemployment rate in different year.<br>
+				Triggers 2 : In each slide, we can click arrow botton of top and bottom to go next slide or previous slide. <br>
+				</p>
+
 			</div>
-        
-<!-- end navbar-->
+		
+
 			<div id ="precontent">
 			</div>
 
-			<div id ="content">
-				<div id="content1">
-					<div class = "contentleft">
-							<p><B>Map Chart </B> &nbsp;&nbsp;&nbsp;2011 Unemployment Rate </p>
-							<p></p>
-							
-							<p><img src="IMG/Mappic.jpg" alt="" width="250" height="60" /></p>
-							<div id="tooltip"></div><!-- div to hold tooltip. -->
-							<svg width="960" height="600" id="statesvg"></svg> <!-- svg to hold the map. -->
-							<script src="uStates.js"></script> <!--  creates uStates. -->
-							<script src="//uStates.js"></script> <!-- creates uStates. -->
-							<script src="/uStates.js"></script> <!-- creates uStates. -->
-							<script src="http://d3js.org/d3.v3.min.js"></script>
-
-							<script>
-								function tooltipHtml(n, d){ /* function to create html content string in tooltip div. */
-								return "<h4>"+n+"</h4><table>"+
-								"<tr><td>2011 Unemployment Rate: "+(d.total)+" %</td></tr>"+
-								"</table>";
-								}
-								var payments_data = [
-								{id: "MT",total: 6.9},
-								{id: "VT",total: 5.5},
-								{id: "AK",total: 7.6},
-								{id: "SD",total: 4.7},
-								{id: "ME",total: 7.9},
-								{id: "ND",total: 7.2},
-								{id: "NE",total: 4.4},
-								{id: "NH",total: 5.4},
-								{id: "LS",total: 7.8},
-								{id: "ID",total: 8.3},
-								{id: "NV",total: 13.0},
-								{id: "AL",total: 9.6},
-								{id: "WI",total: 7.8},
-								{id: "HI",total: 6.8},
-								{id: "AR",total: 8.3},
-								{id: "NM",total: 7.5},
-								{id: "DC",total: 10.2},
-								{id: "WY",total: 5.8},
-								{id: "DE",total: 7.5},
-								{id: "OR",total: 9.5},
-								{id: "UT",total: 6.7},
-								{id: "KS",total: 6.5},
-								{id: "MD",total: 7.2},
-								{id: "RI",total: 11.0},
-								{id: "WV",total: 8.1},
-								{id: "MS",total: 10.0},
-								{id: "WA",total: 9.3},
-								{id: "CO",total: 8.4},
-								{id: "MN",total: 6.5},
-								{id: "IA",total: 5.5},
-								{id: "SC",total: 10.6},
-								{id: "GA",total: 10.2},
-								{id: "TN",total: 9.0},
-								{id: "AZ",total: 9.5},
-								{id: "MO",total: 8.5},
-								{id: "KY",total: 9.4},
-								{id: "OH",total: 8.8},
-								{id: "CT",total: 8.8},
-								{id: "IL",total: 9.7},
-								{id: "VA",total: 6.6},
-								{id: "OK",total: 5.9},
-								{id: "IN",total: 9.1},
-								{id: "MI",total: 10.4},
-								{id: "NJ",total: 9.3},
-								{id: "CA",total: 11.7},
-								{id: "FL",total: 10.0},
-								{id: "NC",total: 10.3},
-								{id: "TX",total: 7.8},
-								{id: "PA",total: 7.9},
-								{id: "NY",total: 8.3},
-								{id: "MA",total: 7.3}
-								];
-								payments_data.forEach(function(d){
-								var total = Math.round(d.total);
-								payments_data[d.id]={total:d.total,color:d3.interpolate("#e5f5f9", "#a7ddeb")(total/2)};
-								});
-								/* draw states on id #statesvg */
-								uStates.draw("#statesvg", payments_data, tooltipHtml);
-							</script>
-						
-					</div>
-				</div><!-- end content 1 -->
-			</div><!-- end content  -->
-			<div id ="mapcontent">
-				<p>In Geographical Map Chart, it shows unemployment rate for States from 2011 to 2015. 
-				The deep color shows higher unemployment rate. Palette is from deep Blue to light blue. 
-                                Color split 8 steps for unemployment rate from 0% to 16%. The color became lighter from year to year. 
-				The deepest blue is Nevada, 13%, in 2011. The lightest blue is Nebraska, 4.4%, in 2011. 
-				Moreover, the deepest blue is still Nevada, 8.7%, in 2015. The lightest blue is North Dakota, 2.7%, in 2015.
-				</p>
-			</div>
+	
 				
 		<div id="nextpage">
 			
-			<button type="button" class="button" width="60" height="60"><a href="barchart.html" >&#x2193;</a></button>
+			<button type="button" class="button" width="60" height="60"><a href="2011unemployment.html" >&#x2193;</a></button>
 			
 		</div>
 	</div>
