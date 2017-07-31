@@ -102,7 +102,7 @@
 			<div id ="content">
 				<div id="content1">
 					<div class = "contentleft">
-							<p><B>Map Chart </B> &nbsp;&nbsp;&nbsp;2013 Unemployment Rate </p>
+							<p><B>Map Chart </B> &nbsp;&nbsp;&nbsp;2014 Unemployment Rate </p>
 							<p></p>
 							<p><img src="IMG/Mappic.jpg" alt="" width="250" height="60" /></p>
 							<div id="tooltip"></div><!-- div to hold tooltip. -->
@@ -115,62 +115,62 @@
 							<script>
 								function tooltipHtml(n, d){ /* function to create html content string in tooltip div. */
 								return "<h4>"+n+"</h4><table>"+
-								"<tr><td>2013 Unemployment Rate: "+(d.total)+" %</td></tr>"+
+								"<tr><td>2014 Unemployment Rate: "+(d.total)+" %</td></tr>"+
 								"</table>";
 								}
 								var payments_data = [
 									
 								{id: "AK",total: 6.9},
-								{id: "AL",total: 7.2},
-								{id: "AR",total: 7.3},
-								{id: "AZ",total: 7.7},
-								{id: "CA",total: 8.9},
-								{id: "CO",total: 6.8},
-								{id: "CT",total: 7.8},
-								{id: "DC",total: 8.5},
-								{id: "DE",total: 6.7},
-								{id: "FL",total: 7.3},
-								{id: "GA",total: 8.2},
-								{id: "HI",total: 4.9},
-								{id: "IA",total: 4.7},
-								{id: "ID",total: 6.2},
-								{id: "IL",total: 9.1},
-								{id: "IN",total: 7.7},
-								{id: "LS",total: 4.7},
-								{id: "KS",total: 5.3},
-								{id: "KY",total: 8.1},
-								{id: "ME",total: 6.6},
-								{id: "MD",total: 6.6},
-								{id: "MA",total: 6.7},
-								{id: "MI",total: 8.8},	
-								{id: "MN",total: 4.9},
-								{id: "MO",total: 6.7},
-								{id: "MS",total: 8.6},
-								{id: "MT",total: 5.4},
-								{id: "NC",total: 7.9},
-								{id: "ND",total: 2.9},
-								{id: "NE",total: 3.8},
-								{id: "NJ",total: 8.2},
-								{id: "NH",total: 5.1},
-								{id: "NM",total: 7.0},
-								{id: "NV",total: 9.6},
-								{id: "NY",total: 7.7},
-								{id: "OH",total: 7.5},
-								{id: "OK",total: 5.3},
-								{id: "OR",total: 7.9},	
-								{id: "PA",total: 7.4},
-								{id: "RI",total: 9.3},
-								{id: "SC",total: 7.6},
-								{id: "SD",total: 3.8},
-								{id: "TN",total: 7.8},
-								{id: "TX",total: 6.2},
-								{id: "UT",total: 4.6},
-								{id: "VA",total: 5.7},
-								{id: "VT",total: 4.4},	
-								{id: "WA",total: 7.0},
-								{id: "WI",total: 6.7},
-								{id: "WV",total: 6.7},
-								{id: "WY",total: 4.7}									
+								{id: "AL",total: 6.8},
+								{id: "AR",total: 6.1},
+								{id: "AZ",total: 6.8},
+								{id: "CA",total: 7.5},
+								{id: "CO",total: 5.0},
+								{id: "CT",total: 6.6},
+								{id: "DC",total: 7.8},
+								{id: "DE",total: 5.7},
+								{id: "FL",total: 6.3},
+								{id: "GA",total: 7.1},
+								{id: "HI",total: 4.4},
+								{id: "IA",total: 4.2},
+								{id: "ID",total: 4.8},
+								{id: "IL",total: 7.1},
+								{id: "IN",total: 5.9},
+								{id: "LS",total: 6.4},
+								{id: "KS",total: 4.6},
+								{id: "KY",total: 6.5},
+								{id: "ME",total: 5.6},
+								{id: "MD",total: 5.8},
+								{id: "MA",total: 5.7},
+								{id: "MI",total: 7.3},	
+								{id: "MN",total: 4.2},
+								{id: "MO",total: 6.2},
+								{id: "MS",total: 7.6},
+								{id: "MT",total: 4.7},
+								{id: "NC",total: 6.3},
+								{id: "ND",total: 2.7},
+								{id: "NE",total: 3.3},
+								{id: "NJ",total: 6.7},
+								{id: "NH",total: 4.3},
+								{id: "NM",total: 6.7},
+								{id: "NV",total: 7.9},
+								{id: "NY",total: 6.3},
+								{id: "OH",total: 5.8},
+								{id: "OK",total: 4.5},
+								{id: "OR",total: 6.8},	
+								{id: "PA",total: 5.9},
+								{id: "RI",total: 7.7},
+								{id: "SC",total: 6.4},
+								{id: "SD",total: 3.4},
+								{id: "TN",total: 6.5},
+								{id: "TX",total: 5.1},
+								{id: "UT",total: 3.8},
+								{id: "VA",total: 5.2},
+								{id: "VT",total: 4.0},	
+								{id: "WA",total: 6.1},
+								{id: "WI",total: 5.4},
+								{id: "WV",total: 6.6},
+								{id: "WY",total: 4.1}									
 								];
 								payments_data.forEach(function(d){
 								var total = Math.round(d.total);
@@ -179,6 +179,7 @@
 								/* draw states on id #statesvg */
 								uStates.draw("#statesvg", payments_data, tooltipHtml);
 							</script>
+						
 					</div>
 				</div><!-- end content 1 -->
 			</div><!-- end content  -->
