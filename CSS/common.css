@@ -37,7 +37,7 @@ a:active {
 	margin: auto;
 }
 #wrapper #banner {
-	height: 100px;
+	height: auto;
 	width: 1200px;
 	background:url(../PTPImages/The-Utimate-in-Fire-Protection.jpg);
 	
@@ -55,10 +55,10 @@ a:active {
 
 #wrapper #banner p {
 
-	width: 800px;
+	width: 1000px;
 	margin-left: 100px;
 	position: relative;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: bold;
 	color: #800000;
 	
@@ -66,8 +66,8 @@ a:active {
 
 #wrapper #banner h1 {
 
-	width: 800px;
-	margin-top: 30px;
+	width: 1000px;
+	margin-top: 20px;
 	margin-left: 100px;
 	position: relative;
 	font-size: 24px;
