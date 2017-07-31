@@ -11,115 +11,111 @@
 	</head>
 	<body>
 	<div id = "wrapper"> 
-      <div id="nextpage">
-	      		<p></P>	
-				  <button type="button" ><a href="barchart.html" >&#8593;</a></button>
+      			<div id="nextpage">
+				<p></P>	
+				<button type="button" ><a href="barchart.html" >&#8593;</a></button>
 			</div>
 
 		<div id="content">
-		<div id="content11">
-          <div class = "contentleft">
-            <p>2011 Unemployment Rate</p>
-                <div id="piechart1"></div>
-                <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-                <script type="text/javascript">
-                // Load google charts
-                google.charts.load('current', {'packages':['corechart']});
-                google.charts.setOnLoadCallback(drawChart);
-                // Draw the chart and set the chart values
-                function drawChart() {
-                  var data = google.visualization.arrayToDataTable([
-                  ['Task', 'Hours per Day'],
-                  ['Employment', 141791255],
-                  ['Unemployment', 14035049]
-                ]);
-                  // Optional; add a title and set the width and height of the chart
-                  var options = {'title':'2011 Total US Unemployment Rate', 'width':500, 'height':350};
-                  // Display the chart inside the <div> element with id="piechart"
-                  var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
-                  chart.draw(data, options);
-                }
-                </script>				
-          </div>	
-          <div class = "contentmiddle">
-              <div id="piechart2"></div>
-              <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-              <script type="text/javascript">
-              // Load google charts
-              google.charts.load('current', {'packages':['corechart']});
-              google.charts.setOnLoadCallback(drawChart);
-              // Draw the chart and set the chart values
-              function drawChart() {
-                var data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
-                ['Employment', 143688931],
-                ['Unemployment', 12698111]
-              ]);
-                // Optional; add a title and set the width and height of the chart
-                var options = {'title':'2012 Total US Unemployment Rate', 'width':500, 'height':350};
-                // Display the chart inside the <div> element with id="piechart"
-                var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
-                chart.draw(data, options);
-              }
-              </script>				
+			<div id="content11">
+          			<div class = "contentleft">
+					<p>2011 Unemployment Rate and Unemployed Population</p>
+					<div id="piechart1"></div>
+					<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+					<script type="text/javascript">
+					// Load google charts
+					google.charts.load('current', {'packages':['corechart']});
+					google.charts.setOnLoadCallback(drawChart);
+					// Draw the chart and set the chart values
+					function drawChart() {
+					  var data = google.visualization.arrayToDataTable([
+					  ['Task', 'Hours per Day'],
+					  ['Employment', 141791255],
+					  ['Unemployment', 14035049]
+					]);
+					  // Optional; add a title and set the width and height of the chart
+					  var options = {'title':'2011 Total US Unemployment Rate', 'width':500, 'height':350};
+					  // Display the chart inside the <div> element with id="piechart"
+					  var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
+					  chart.draw(data, options);
+					}
+					</script>				
+          			</div>	
+          			<div class = "contentmiddle">
+				      <div id="piechart2"></div>
+				      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+				      <script type="text/javascript">
+				      // Load google charts
+				      google.charts.load('current', {'packages':['corechart']});
+				      google.charts.setOnLoadCallback(drawChart);
+				      // Draw the chart and set the chart values
+				      function drawChart() {
+					var data = google.visualization.arrayToDataTable([
+					['Task', 'Hours per Day'],
+					['Employment', 143688931],
+					['Unemployment', 12698111]
+				      ]);
+					// Optional; add a title and set the width and height of the chart
+					var options = {'title':'2012 Total US Unemployment Rate', 'width':500, 'height':350};
+					// Display the chart inside the <div> element with id="piechart"
+					var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
+					chart.draw(data, options);
+				      }
+				      </script>				
 
-        </div>	
-        <div class = "contentright">
+        			</div>	
+        			<div class = "contentright">
 				
-          <div id="piechart3"></div>
-          <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-          <script type="text/javascript">
-          // Load google charts
-          google.charts.load('current', {'packages':['corechart']});
-          google.charts.setOnLoadCallback(drawChart);
-          // Draw the chart and set the chart values
-          function drawChart() {
-            var data = google.visualization.arrayToDataTable([
-            ['Task', 'Hours per Day'],
-            ['Employment', 145126067],
-            ['Unemployment', 11642668]
-          ]);
-            // Optional; add a title and set the width and height of the chart
-            var options = {'title':'2013 Total US Unemployment Rate', 'width':500, 'height':350};
-            // Display the chart inside the <div> element with id="piechart"
-            var chart = new google.visualization.PieChart(document.getElementById('piechart3'));
-            chart.draw(data, options);
-          }
-          </script>				
+				  <div id="piechart3"></div>
+				  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+				  <script type="text/javascript">
+				  // Load google charts
+				  google.charts.load('current', {'packages':['corechart']});
+				  google.charts.setOnLoadCallback(drawChart);
+				  // Draw the chart and set the chart values
+				  function drawChart() {
+				    var data = google.visualization.arrayToDataTable([
+				    ['Task', 'Hours per Day'],
+				    ['Employment', 145126067],
+				    ['Unemployment', 11642668]
+				  ]);
+				    // Optional; add a title and set the width and height of the chart
+				    var options = {'title':'2013 Total US Unemployment Rate', 'width':500, 'height':350};
+				    // Display the chart inside the <div> element with id="piechart"
+				    var chart = new google.visualization.PieChart(document.getElementById('piechart3'));
+				    chart.draw(data, options);
+				  }
+				  </script>				
 			  </div>
 		</div>
       
 
 		<div id="content12">
-        <div class = "contentleft">
-          <p>2014 Unemployment Rate</p>
-          <div id="piechart4"></div>
-          <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-          <script type="text/javascript">
-          // Load google charts
-          google.charts.load('current', {'packages':['corechart']});
-          google.charts.setOnLoadCallback(drawChart);
-          // Draw the chart and set the chart values
-          function drawChart() {
-            var data = google.visualization.arrayToDataTable([
-            ['Task', 'Hours per Day'],
-            ['Employment', 147604328],
-            ['Unemployment', 9796479]
-          ]);
-            // Optional; add a title and set the width and height of the chart
-            var options = {'title':'2014 Total US Unemployment Rate', 'width':500, 'height':350};
-            // Display the chart inside the <div> element with id="piechart"
-            var chart = new google.visualization.PieChart(document.getElementById('piechart4'));
-            chart.draw(data, options);
-          }
-          </script>				
-        </div>
-        <div class = "contentleft">
-				<p>2015 Unemployment Rate</p>
-
-			</div>
+        		<div class = "contentleft">
+				  <p>2014 Unemployment Rate</p>
+				  <div id="piechart4"></div>
+				  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+				  <script type="text/javascript">
+				  // Load google charts
+				  google.charts.load('current', {'packages':['corechart']});
+				  google.charts.setOnLoadCallback(drawChart);
+				  // Draw the chart and set the chart values
+				  function drawChart() {
+				    var data = google.visualization.arrayToDataTable([
+				    ['Task', 'Hours per Day'],
+				    ['Employment', 147604328],
+				    ['Unemployment', 9796479]
+				  ]);
+				    // Optional; add a title and set the width and height of the chart
+				    var options = {'title':'2014 Total US Unemployment Rate', 'width':500, 'height':350};
+				    // Display the chart inside the <div> element with id="piechart"
+				    var chart = new google.visualization.PieChart(document.getElementById('piechart4'));
+				    chart.draw(data, options);
+				  }
+				  </script>				
+        		</div>
 			<div class = "contentmiddle">
-				
+				<p>2015 Unemployment Rate</p>
 				<div id="piechart5"></div>
 				<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 				<script type="text/javascript">
@@ -141,10 +137,7 @@
 				}
 				</script>				
 			</div>
-   </div><!-- end content12 -->
-
-
-		
+   		</div><!-- end content12 -->
 		</div> <!--end content-->
 			
 
