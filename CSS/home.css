@@ -174,9 +174,50 @@ img{margin: 0;padding: 0;border: 0; z-index:10;}
 }
 
 #wrapper #mapcontent {
-
-	padding: 100px 0px;
+	width: 800px;
+    	height: 100px;
+	padding: 0px 0px;
 	font-size: 14px;
+}
+
+
+#wrapper #mapcontent {
+	height: 100px;
+	width: 1300px;
+	
+	background-repeat: no-repeat;
+	border-top-width: 2px;
+	border-right-width: 2px;
+	border-left-width: 2px;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+	border-top-color: #ffffff;
+	border-right-color: #ffffff;
+	border-left-color: #ffffff;
+}
+
+#wrapper #mapcontent p {
+
+	width: 800px;
+	margin-left: 100px;
+	position: relative;
+	font-size: 14px;
+	font-weight: bold;
+	color: #800000;
+	
+}
+
+#wrapper #mapcontent h1 {
+
+	width: 800px;
+	margin-top: 30px;
+	margin-left: 100px;
+	position: relative;
+	font-size: 24px;
+	font-weight: bold;
+	color: #000000;
+	
 }
 
 
