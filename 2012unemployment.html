@@ -60,8 +60,10 @@
 			}
 		</style>
 		
+		
 		<script src="//d3js.org/d3.v3.min.js"></script>
 		<script src="http://d3js.org/d3.v3.min.js"></script>
+
 		
 	</head>
 	<body>
@@ -76,6 +78,7 @@
 				After we watch these charts, we easily know which state has high unemployment rate for each year 
 				and we know unemployment rate is going down for every year.		
 				</P>
+		
 			</div>
 		
 <!---navbar-->
@@ -89,7 +92,7 @@
 						<li><a href="2015unemployment.html">2015 <br>Unemployment</a></li>
 
 					</ul>
-				</nav>   
+				</nav>          
 			</div>
         
 <!-- end navbar-->
@@ -176,14 +179,9 @@
 								/* draw states on id #statesvg */
 								uStates.draw("#statesvg", payments_data, tooltipHtml);
 							</script>
-						
 					</div>
-					<div class = "contentright">
-
-					
-					</div>
-				</div><!-- end content 1 -->		
-			</div><!-- end content -->
+				</div><!-- end content 1 -->
+			</div><!-- end content  -->
 			<div id ="mapcontent">
 				<p>In Geographical Map Chart, it shows unemployment rate for States from 2011 to 2015. 
 				The deep color shows higher unemployment rate. Palette is from deep Blue to light blue. 
@@ -192,10 +190,12 @@
 				Moreover, the deepest blue is still Nevada, 8.7%, in 2015. The lightest blue is North Dakota, 2.7%, in 2015.
 				</p>
 			</div>
-			<div id="nextpage">
-				<button type="button" ><a href="barchart.html" >&#x2193;</a></button>
-
-			</div>
+				
+		<div id="nextpage">
+			<button type="button" width="60" height="60"><a href="barchart.html" >&#x2193;</a></button>
+			
 		</div>
+	</div>
+
 	</body>
 </html>
