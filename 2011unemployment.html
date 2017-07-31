@@ -10,168 +10,192 @@
 		<link href="CSS/common.css" rel="stylesheet" type="text/css" />
 		<link href="CSS/home.css" rel="stylesheet" type="text/css" />
 		
-
+		<meta charset="utf-8">
+		<style>
+			.state{
+				fill: none;
+				stroke: #a9a9a9;
+				stroke-width: 1;
+			}
+			.state:hover{
+				fill-opacity:0.5;
+			}
+			#tooltip {   
+				position: absolute;           
+				text-align: center;
+				padding: 20px;             
+				margin: 10px;
+				font: 12px sans-serif;        
+				background: lightsteelblue;   
+				border: 1px;      
+				border-radius: 2px;           
+				pointer-events: none;         
+			}
+			#tooltip h4{
+				margin:0;
+				font-size:14px;
+			}
+			#tooltip{
+				background:rgba(0,0,0,0.9);
+				border:1px solid grey;
+				border-radius:5px;
+				font-size:12px;
+				width:auto;
+				padding:4px;
+				color:white;
+				opacity:0;
+			}
+			#tooltip table{
+				table-layout:fixed;
+			}
+			#tooltip tr td{
+				padding:0;
+				margin:0;
+			}
+			#tooltip tr td:nth-child(1){
+				width:50px;
+			}
+			#tooltip tr td:nth-child(2){
+				text-align:center;
+			}
+		</style>
+		
 		
 		<script src="//d3js.org/d3.v3.min.js"></script>
 		<script src="http://d3js.org/d3.v3.min.js"></script>
+
 		
 	</head>
 	<body>
 		<div id = "wrapper"> 
-			<div id="nextpage">
-				<button type="button" ><a href="index.html" >&#8593;</a></button>
-			</div>
-
+			<div id = "banner">	
+				<h1>Unemployment Rate and Unemployed Population for States from 2011 to 2015 </h1>
+				<p></p>
+				<p><b>Introduce</b></P>
+				<p></p>
+				<p>The narrative visualization is Interactive Slideshow. In each slide, we can know more information about unemployment rate. 
+				I use Map Chart, Bar chart and pie chart to show unemployment rate and unemployed population from 2011 to 2015. 
+				After we watch these charts, we easily know which state has high unemployment rate for each year 
+				and we know unemployment rate is going down for every year.		
+				</P>
 		
+			</div>
+		
+<!---navbar-->
+			<div id="navbar">
+				<nav class="nav">
+					<ul>
+						<li><a href="index.html">2011 <br>Unemployment</a></li>
+						<li><a href="2012unemployment.html">2012 <br>Unemployment</a></li>
+						<li><a href="2013unemployment.html">2013 <br>Unemployment</a></li>
+						<li><a href="2014unemployment.html">2014 <br>Unemployment</a></li>
+						<li><a href="2015unemployment.html">2015 <br>Unemployment</a></li>
 
+					</ul>
+				</nav>          
+			</div>
+        
+<!-- end navbar-->
 			<div id ="precontent">
 			</div>
 
 			<div id ="content">
-				<div id="content2">
+				<div id="content1">
 					<div class = "contentleft">
-						<p>2011 Unemployment Rate</p>
-						<div id="piechart1"></div>
-						<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-						<script type="text/javascript">
-						// Load google charts
-						google.charts.load('current', {'packages':['corechart']});
-						google.charts.setOnLoadCallback(drawChart);
-						// Draw the chart and set the chart values
-						function drawChart() {
-						  var data = google.visualization.arrayToDataTable([
-						  ['Task', 'Hours per Day'],
-						  ['Employment', 141791255],
-						  ['Unemployment', 14035049]
-						]);
-						  // Optional; add a title and set the width and height of the chart
-						  var options = {'title':'2011 Total US Unemployment Rate', 'width':500, 'height':350};
-						  // Display the chart inside the <div> element with id="piechart"
-						  var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
-						  chart.draw(data, options);
-						}
-						</script>				
-         		
-					</div>
-					<div class = "contentright">
+							<p><B>Map Chart </B> &nbsp;&nbsp;&nbsp;2012 Unemployment Rate </p>
+							<p><img src="IMG/Mappic.jpg" alt="" width="250" height="60" /></p>
+							<p></p>
+							<div id="tooltip"></div><!-- div to hold tooltip. -->
+							<svg width="960" height="600" id="statesvg"></svg> <!-- svg to hold the map. -->
+							<script src="uStates.js"></script> <!--  creates uStates. -->
+							<script src="//uStates.js"></script> <!-- creates uStates. -->
+							<script src="/uStates.js"></script> <!-- creates uStates. -->
+							<script src="http://d3js.org/d3.v3.min.js"></script>
 
-					
+							<script>
+								function tooltipHtml(n, d){ /* function to create html content string in tooltip div. */
+								return "<h4>"+n+"</h4><table>"+
+								"<tr><td>2012 Unemployment Rate: "+(d.total)+" %</td></tr>"+
+								"</table>";
+								}
+								var payments_data = [
+									
+								{id: "AL",total: 8.0},
+								{id: "AK",total: 7.1},
+								{id: "AZ",total: 8.3},
+								{id: "AR",total: 7.6},
+								{id: "CA",total: 10.4},
+								{id: "CO",total: 7.9},
+								{id: "CT",total: 8.3},
+								{id: "DC",total: 9.0},
+								{id: "DE",total: 7.2},
+								{id: "FL",total: 8.5},
+								{id: "GA",total: 9.2},
+								{id: "HI",total: 6.0},
+								{id: "IA",total: 5.1},
+								{id: "ID",total: 7.2},
+								{id: "IL",total: 9.0},
+								{id: "IN",total: 8.3},
+								{id: "LS",total: 7.1},
+								{id: "KS",total: 5.7},
+								{id: "KY",total: 8.2},
+								{id: "ME",total: 7.5},
+								{id: "MD",total: 7.0},
+								{id: "MA",total: 6.7},
+								{id: "MI",total: 9.1},	
+								{id: "MN",total: 5.6},
+								{id: "MO",total: 7.0},
+								{id: "MS",total: 9.0},
+								{id: "MT",total: 6.0},
+								{id: "NC",total: 9.3},
+								{id: "ND",total: 3.1},
+								{id: "NE",total: 4.0},
+								{id: "NJ",total: 9.3},
+								{id: "NH",total: 5.5},
+								{id: "NM",total: 7.1},
+								{id: "NV",total: 11.2},
+								{id: "NY",total: 8.5},
+								{id: "OH",total: 7.4},
+								{id: "OK",total: 5.3},
+								{id: "OR",total: 8.8},	
+								{id: "PA",total: 7.8},
+								{id: "RI",total: 10.4},
+								{id: "SC",total: 9.2},
+								{id: "SD",total: 4.3},
+								{id: "TN",total: 7.8},
+								{id: "TX",total: 6.7},
+								{id: "UT",total: 5.4},
+								{id: "VA",total: 6.0},
+								{id: "VT",total: 5.0},	
+								{id: "WA",total: 8.1},
+								{id: "WI",total: 7.0},
+								{id: "WV",total: 7.5},
+								{id: "WY",total: 5.3}									
+								];
+								payments_data.forEach(function(d){
+								var total = Math.round(d.total);
+								payments_data[d.id]={total:d.total,color:d3.interpolate("#e5f5f9", "#a7ddeb")(total/2)};
+								});
+								/* draw states on id #statesvg */
+								uStates.draw("#statesvg", payments_data, tooltipHtml);
+							</script>
 					</div>
-				</div><!-- end content 2 -->
-				<div id="content3">
-					<div class = "contentleft">
-						<div id="piechart2"></div>
-						      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-						      <script type="text/javascript">
-						      // Load google charts
-						      google.charts.load('current', {'packages':['corechart']});
-						      google.charts.setOnLoadCallback(drawChart);
-						      // Draw the chart and set the chart values
-						      function drawChart() {
-							var data = google.visualization.arrayToDataTable([
-							['Task', 'Hours per Day'],
-							['Employment', 143688931],
-							['Unemployment', 12698111]
-						      ]);
-							// Optional; add a title and set the width and height of the chart
-							var options = {'title':'2012 Total US Unemployment Rate', 'width':500, 'height':350};
-							// Display the chart inside the <div> element with id="piechart"
-							var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
-							chart.draw(data, options);
-						      }
-						      </script>		
-
-					</div>
-				</div><!-- end content3 -->
-				<div id="content4">
-					<div class = "contentleft">
-						<div id="piechart3"></div>
-						  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-						  <script type="text/javascript">
-						  // Load google charts
-						  google.charts.load('current', {'packages':['corechart']});
-						  google.charts.setOnLoadCallback(drawChart);
-						  // Draw the chart and set the chart values
-						  function drawChart() {
-						    var data = google.visualization.arrayToDataTable([
-						    ['Task', 'Hours per Day'],
-						    ['Employment', 145126067],
-						    ['Unemployment', 11642668]
-						  ]);
-						    // Optional; add a title and set the width and height of the chart
-						    var options = {'title':'2013 Total US Unemployment Rate', 'width':500, 'height':350};
-						    // Display the chart inside the <div> element with id="piechart"
-						    var chart = new google.visualization.PieChart(document.getElementById('piechart3'));
-						    chart.draw(data, options);
-						  }
-						  </script>				
-					</div>
-				</div><!-- end content4 -->
-				<div id="content5">
-					<div class = "contentleft">
-						<p>2014 Unemployment Rate</p>
-						  <div id="piechart4"></div>
-						  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-						  <script type="text/javascript">
-						  // Load google charts
-						  google.charts.load('current', {'packages':['corechart']});
-						  google.charts.setOnLoadCallback(drawChart);
-						  // Draw the chart and set the chart values
-						  function drawChart() {
-						    var data = google.visualization.arrayToDataTable([
-						    ['Task', 'Hours per Day'],
-						    ['Employment', 147604328],
-						    ['Unemployment', 9796479]
-						  ]);
-						    // Optional; add a title and set the width and height of the chart
-						    var options = {'title':'2014 Total US Unemployment Rate', 'width':500, 'height':350};
-						    // Display the chart inside the <div> element with id="piechart"
-						    var chart = new google.visualization.PieChart(document.getElementById('piechart4'));
-						    chart.draw(data, options);
-						  }
-						  </script>		
-						
-					</div>
-				</div><!-- end content5 -->
-				<div id="content6">
-					<div class = "contentleft">
-							<div id="piechart5"></div>
-				<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-				<script type="text/javascript">
-				// Load google charts
-				google.charts.load('current', {'packages':['corechart']});
-				google.charts.setOnLoadCallback(drawChart);
-				// Draw the chart and set the chart values
-				function drawChart() {
-				  var data = google.visualization.arrayToDataTable([
-				  ['Task', 'Hours per Day'],
-				  ['Employment', 149950804],
-				  ['Unemployment', 8439309]
-				]);
-				  // Optional; add a title and set the width and height of the chart
-				  var options = {'title':'2015 Total US Unemployment Rate', 'width':500, 'height':350};
-				  // Display the chart inside the <div> element with id="piechart"
-				  var chart = new google.visualization.PieChart(document.getElementById('piechart5'));
-				  chart.draw(data, options);
-				}
-				</script>			
-
-					</div>
-				</div><!-- end content6 -->
-			</div><!-- end content -->
-			<div id="barcontent">
-				<p>In Bar chart, it shows that different states have different unemployment rate from 2011 to 2015.</P>
-				<p>The America economy became better from 2011 to 2015, because the unemployment rate had continued to decline from 2011 to 2015 in each of the 50 States.</P>
-				<p>The highest unemployment rate from 2011 to 2015 is Puerto Rico. </P>
-				<p>The lowest unemployment rate from 2011 to 2015 is North Dakota. </P>
-				<p>The largest decreasing unemployment rate is Nevada that has dropped 5.1 % from 2011(13.0%) to 2015 (6.7%). </P>
-				<p>The second declining unemployment rate is California, dropping 5.5 %. </P>
-				<p>The third decreasing unemployment rate is Florida, 4.6% drop from 2011 to 2015.  </P>
+				</div><!-- end content 1 -->
+			</div><!-- end content  -->
+			<div id ="mapcontent">
+				<p>In Geographical Map Chart, it shows unemployment rate for States from 2011 to 2015. 
+				The deep color shows higher unemployment rate. Palette is from deep Blue to light blue. 
+                                Color split 8 steps for unemployment rate from 0% to 16%. The color became lighter from year to year. 
+				The deepest blue is Nevada, 13%, in 2011. The lightest blue is Nebraska, 4.4%, in 2011. 
+				Moreover, the deepest blue is still Nevada, 8.7%, in 2015. The lightest blue is North Dakota, 2.7%, in 2015.
+				</p>
 			</div>
+				
+		<div id="nextpage">
+			<button type="button" width="60" height="60"><a href="barchart.html" >&#x2193;</a></button>
 			
-			<div id="nextpage">
-				<button type="button" ><a href=piechart.html" >&#8595;</a></button>
-			</div>
-		
+		</div>
+	</div>
+
 	</body>
 </html>
